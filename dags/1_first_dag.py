@@ -1,7 +1,6 @@
 from datetime import datetime
 from airflow.sdk import dag, task
 
-
 @dag(
     dag_id="first_dag",
     start_date=datetime(2026, 10, 14),
@@ -27,6 +26,5 @@ def first_dag():
     third = third_task()
 
     first >> second >> third
-
-
+    
 first_dag()
